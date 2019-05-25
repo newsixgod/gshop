@@ -76,7 +76,7 @@ export default {
 
   [CLEAR_CART](state) {
 
-    // 清除food中的count
+    // 清除food中的count count 被其它引用，清零之后再清空购物车所有商品
     state.cartFoods.forEach(food => food.count = 0)
     // 移除购物车中所有购物项
     state.cartFoods = []
